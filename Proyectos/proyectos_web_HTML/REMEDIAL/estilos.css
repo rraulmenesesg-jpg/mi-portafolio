@@ -1,0 +1,110 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+.contenedor {
+    max-width: 720px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    
+}
+header {
+    color: white;
+    background: #4a6cf7;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+        }
+
+.seccion {
+    padding: 30px 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.seccion:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: #4a6cf7;
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+    
+}
+.formula {
+    font-weight: 600;
+    font-size: 1.3rem;
+    background: #f8f9ff;
+    color: #333;
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin: 10px 0;
+    display: inline-block;
+    
+}
+input {
+    padding: 14px;
+    width: 100%;
+    border: 2px solid #ddd;
+    margin: 12px 0;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    transition: all 0.3s;
+    
+}
+input:focus {
+    outline: none;
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 4px rgba(74, 108, 247, 0.2);
+}
+
+button {
+    color: white;
+    background: #4a6cf7;
+    padding: 14px 28px;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-top: 10px;
+    transition: all 0.3s;
+    
+}
+button:hover {
+    transform: translateY(-2px);
+    background: #3b5be0;
+    
+}
+.resultado {
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 12px;
+    background: #f0f7ff;
+    font-weight: 600;
+    font-size: 1.4rem;
+    min-height: 60px;
+    color: #333;
+    
+}
+.unidad {
+    color: #666;
+    font-size: 1rem;
+    font-weight: 400;
+}

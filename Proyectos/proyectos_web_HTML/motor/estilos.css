@@ -1,0 +1,52 @@
+h1{
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background-color: #333;
+    color: #ffff;
+    max-width: 50%;
+    max-height: 50%;
+
+}
+
+.auto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    background-color: #333;
+    border: none;
+    color: #ffff;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+body{
+    background-color: #ffff;
+    background-image: linear-gradient(to bottom, #fff,#fff);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    background-color: #a4a1a1;
+    padding: 10px;
+    border-bottom: 1px solid #a4a1a1;
+    text-align: center;
+}

@@ -1,0 +1,20 @@
+.basica{
+    color:black;
+    background-color: darkgray;
+    padding: auto;
+}
+.math{
+    color:black;
+    background-color: grey;
+    padding: auto;
+}
+
+.basica h1{
+    color: brown;
+}
+
+.azar{
+    color:white;
+    background-color: black;
+    padding: auto;
+}

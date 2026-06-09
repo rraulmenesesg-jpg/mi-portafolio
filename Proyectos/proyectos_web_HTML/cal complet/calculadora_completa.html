@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="../../../assets/img/logos_meta/logo_p.png">
+    <link rel="stylesheet" href="asstets/style.css">
+    <script src="asstets/calscript.js"></script>
+</head>
+<body>
+    <div class="calculadora-card">
+        <h1>Calculadora web</h1>
+        <div class="contenedor-colmnas">
+            <div class="columnas">
+                <p>ingresa un primer numero </p>
+                <input type="number" name="dato1" id="dato1" placeholder="0">
+            </div>
+            <div class="columnas">
+                <p>ingresa un segundi numero</p>
+                <input type="number" name="dato2" id="dato2" placeholder="0">
+            </div>
+            
+        </div>
+        <h3>Operaciones Basicas</h3>
+        <div class="botonesbasicos">
+            <button onclick="sumar()">suma</button>
+            <button onclick="restar()">resta</button>
+            <button onclick="multiplicacion()">multiplicacion</button>
+            <button onclick="divicion()">divicion</button>
+        </div>
+        <h3>Operaciones Avanzadas</h3>
+        <div class="botonesavanzadas">
+            <button onclick="potencia()">potencia</button>
+            <button onclick="raiz()">raiz</button>
+            <button onclick="vabsoluto()">vabsoluto</button>
+            <button onclick="random()">random</button>
+        </div>
+        <div class="contenedor-colnmas">
+            <div class="columnas">
+                <p>Resultados</p>
+                <input type="text" name="resultado" id="resultado" placeholder="0">
+            </div>
+        </div>
+        <h3>Redendeadores</h3>
+        <div class="butonesredondeos">
+            <button onclick="raund()">raund</button>
+            <button onclick="floor()">floor</button>
+            <button onclick="cell()">cell</button>
+        </div>
+    </div>
+</body>
+</html>
