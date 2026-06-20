@@ -1,0 +1,79 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: column;
+    align-items: center;
+    padding: 10px;
+
+}
+
+h1{
+    color: rgb(7, 7, 110);
+    font-weight: 800;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.nombreestudainte{
+    background-color: #333;
+    color: #ffff;
+}
+
+.buton-grp{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    max-width: 500px;
+}
+
+button{
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #ffff;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0,0, 0.1);
+}
+
+button:hover{
+    background-color:#6e6c6c ;
+    transform: translate(-2px);
+    box-shadow: 0 4px 6px rgba(127, 127, 127, 0.1); ;
+}
+
+button:active{
+    transform: translateY(0);
+}
+
+#resultado{
+    margin-top: 30px;
+    padding: 20px;
+    min-height: 200px;
+    min-width: 100px;
+    border-color: #ffff;
+    border-radius: 12px;
+    border: 2px solid #000;
+    box-shadow: 0 6px 12px rgba(3, 3, 3, 0.805);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+li{
+    background: #ffff;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+}

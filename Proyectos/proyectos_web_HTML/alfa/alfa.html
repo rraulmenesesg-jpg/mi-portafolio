@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <link rel="icon" type="image/png" href="../../../assets/img/logos_meta/logo_p.png">
+  <title>Saca el Alfa de Cronbach</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-white">
+
+  <!-- HEADER FIJO -->
+  <nav class="navbar navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container-fluid justify-content-between">
+      <button id="btn-instrucciones" class="btn btn-outline-info">INSTRUCCIONES</button>
+      <h1 class="text-info fw-bold m-0 text-center flex-grow-1">SACA EL ALFA DE CRONBACH</h1>
+      <div style="width:130px;"></div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <div class="container-fluid contenido pt-5">
+    <div class="row g-3 mt-5">
+      <!-- COLUMNA IZQUIERDA FIJA -->
+      <div class="col-md-3 position-sticky" style="top: 6rem; height: calc(100vh - 7rem); overflow-y: auto;">
+        <!-- CREA TU TABLA -->
+        <div class="card bg-secondary mb-3">
+          <div class="card-body">
+            <h5 class="card-title text-center text-uppercase">Crea tu tabla</h5>
+
+            <label class="form-label mt-2">No. ITEMS (PREGUNTAS)</label>
+            <div class="input-group mb-2">
+              <input id="noi" type="number" class="form-control" placeholder="5" min="1">
+              <button class="btn btn-outline-light">?</button>
+            </div>
+
+            <label class="form-label">No. PERSONAS</label>
+            <div class="input-group mb-3">
+              <input id="nop" type="number" class="form-control" placeholder="5" min="1">
+              <button class="btn btn-outline-light">?</button>
+            </div>
+
+            <button id="btn-crear-tabla" class="btn btn-info w-100">CREAR TABLA</button>
+          </div>
+        </div>
+
+        <!-- MENÚ DE OPERACIONES -->
+        <div class="card bg-secondary mb-3">
+          <div class="card-body">
+            <h5 class="card-title text-center text-uppercase">Menú de operaciones</h5>
+            <div class="d-grid gap-2">
+              <button id="btn-sacar-varianza" class="btn btn-info">SACAR LA VARIANZA</button>
+              <button id="btn-calcular-alfa" class="btn btn-info">CALCULAR EL ALFA</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMNA CENTRAL -->
+      <div class="col-md-6">
+        <div class="card bg-dark mb-3">
+          <div class="card-body p-2">
+            <div class="table-responsive" style="max-height: 70vh; overflow-y: auto;">
+              <table id="tabla-encuesta" class="table table-dark table-bordered text-center align-middle mb-0">
+                <!-- Tabla generada con JS -->
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- TABLA VARIANZA ÍTEMS -->
+        <div class="card bg-secondary mb-3">
+          <div class="card-body p-2">
+            <table id="tabla-var-items" class="table table-dark table-bordered text-center mb-0">
+              <thead class="table-sticky">
+                <tr><th>Ítem</th><th>Varianza</th><th>Suma</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ALFA Y RECOMENDACIONES -->
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="card bg-secondary">
+              <div class="card-body text-center">
+                <h6 class="fw-bold text-uppercase">El Alfa de Cronbach</h6>
+                <h3 id="lblAlfa" class="fw-bold">—</h3>
+                <p class="mb-1">QUE VALOR TIENE EL ALFA</p>
+                <p id="valoralfa" class="fw-bold">—</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card bg-secondary h-100">
+              <div class="card-body">
+                <h6 class="fw-bold text-uppercase text-center">Recomendaciones</h6>
+                <textarea id="reco" class="form-control bg-info text-white mt-2" rows="5" readonly></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMNA DERECHA -->
+      <div class="col-md-3 position-sticky" style="top: 6rem; height: calc(100vh - 7rem); overflow-y: auto;">
+        <div class="card bg-secondary">
+          <div class="card-body p-2">
+            <table id="tabla-var-personas" class="table table-dark table-bordered text-center mb-0">
+              <thead class="table-sticky">
+                <tr><th>Persona</th><th>Varianza</th><th>Suma</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+                <!-- MENÚ DE RESULTADOS -->
+        <div class="card bg-secondary">
+          <div class="card-body">
+            <h5 class="card-title text-center text-uppercase">Menú de resultados</h5>
+            <p>SUMATORIA DE LOS ÍTEMS: <span id="suma-var-items" class="fw-bold">—</span></p>
+            <p>SUMATORIA DE LAS PERSONAS: <span id="suma-var-personas" class="fw-bold">—</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js_alfa.js"></script>
+</body>
+</html>

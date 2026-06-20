@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    padding: 20px;
+}
+.contenedor {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 700px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 0 auto;
+}
+h1 {
+    color: #333;
+    text-align: center;
+}
+.reto {
+    margin: 25px 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: #fafafa;
+    padding: 15px;
+}
+button {
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #4a6cf7;
+}
+button:hover {
+    background: #3b5be0;
+}
+pre {
+    color: #0f0;
+    padding: 12px;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    font-family: monospace;
+    min-height: 80px;
+    background: #222;
+}
+.titulo-reto {
+    margin-bottom: 10px;
+    color: #4a6cf7;
+}
