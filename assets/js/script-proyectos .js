@@ -1,6 +1,11 @@
 
 const proyectos = [
-    { url: "proyectos_web_HTML/alfa/alfa.html",                  nombre: "Alfa de Cronbach",          herramientas: ["HTML", "CSS", "JavaScript"] },
+    { 
+        url:"proyectos_web_HTML/alfa/alfa.html",                  
+        nombre: "Alfa de Cronbach",          
+        herramientas: ["HTML", "CSS", "JavaScript"] 
+    },
+
     { url: "proyectos_web_HTML/audio/audio.html",                nombre: "Audio Alarma",              herramientas: ["HTML", "CSS", "JavaScript"] },
     { url: "proyectos_web_HTML/cal complet/calculadora_completa.html", nombre: "Calculadora Completa", herramientas: ["HTML", "CSS", "JavaScript"] },
     { url: "proyectos_web_HTML/cartelera cine/index.html",       nombre: "Cartelera Cine",            herramientas: ["HTML", "CSS", "JavaScript"] },
@@ -15,9 +20,10 @@ const proyectos = [
     { url: "proyectos_web_HTML/remedial 2corte/",                nombre: "Ahorros Inteligentes",      herramientas: ["HTML", "CSS", "JavaScript"] },
     { url: "proyectos_web_HTML/SISTEMA ABAROTES/index2for.html", nombre: "Sistema Abarrotes",         herramientas: ["HTML", "CSS", "JavaScript"] },
     { url: "proyectos_web_HTML/SISTEMA ACADEMICO/sistema.html",  nombre: "Sistema Académico",         herramientas: ["HTML", "CSS", "JavaScript"] },
-    { url: "proyectos_web_HTML/SISTEMA AERONABES/",              nombre: "Sistema de Aerolíneas",     herramientas: ["HTML", "CSS", "JavaScript"] },
+    { url: "proyectos_web_HTML/SISTEMA AERONABES/sistem_aerio.html",nombre: "Sistema de Aerolíneas",     herramientas: ["HTML", "CSS", "JavaScript"] },
     { url: "proyectos_web_HTML/tareas/inde.html",                nombre: "Retos",                     herramientas: ["HTML", "CSS", "JavaScript"] },
     { url: "proyectos_web_HTML/trivia/index.html",               nombre: "Trivia",                    herramientas: ["HTML", "CSS", "JavaScript"] },
+    { url:"proyectos_web_HTML/",                                nombre: "explorar todos los archivos",herramientas: ["HTML","CSS","JavaScript"]}
 ];
 
 

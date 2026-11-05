@@ -1,19 +1,27 @@
+/* Archivo CSS optimizado, sin duplicados ni conflictos de dimensiones */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 2;
   background-image: url("../img/index/fondo.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
+  background-color: #f9fafb;
+  color: #222;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1, h2 {
   font-weight: 700;
 }
 
+/* Estilos de tarjetas y transiciones */
 .card {
   border: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
 
@@ -21,83 +29,130 @@ h1, h2 {
   transform: scale(1.03);
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9fafb; 
-  color: #222;
+.modern-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modern-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Barra de navegación y cabecera */
 .navbar {
   background: #0d6efd;
 }
-    
+
 .navbar-brand, .nav-link {
   color: #fff !important;
+  padding: 1px;
 }
+
 header {
-  height: 100vh; 
-  background: linear-gradient(rgba(13,110,253,0.6), rgba(13,110,253,0.8)); 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  color: #fff; 
+  height: 100vh;
+  background: linear-gradient(rgba(13, 110, 253, 0.6), rgba(13, 110, 253, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   text-align: center;
 }
 
 header h1 {
-  font-size: 3rem; 
-  font-weight: 100%;
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 section {
   padding: 80px 20px;
 }
 
-.card img {
-  height: 200px; 
-  object-fit: cover;
-}
-
 footer {
-  background: #0d6efd; 
-  color: #fff; 
-  text-align: center; 
+  background: #0d6efd;
+  color: #fff;
+  text-align: center;
   padding: 20px 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-.text-justify{
+/* Utilidades generales */
+.text-justify {
   max-width: 90%;
   text-align: justify;
 }
 
-.tra{
+.tra {
   align-items: center;
   align-self: center;
   display: block;
 }
 
 .bg-gradient-light {
-    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
 }
 
-.modern-card {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modern-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
-}
-
+/* Contenedor del ícono corregido y centrado (Evita desbordamientos y cortes) */
 .icon-circle {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Dimensiones exactas y preservación de aspecto para las imágenes de los íconos */
+.ico-imagen, .log-icono {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Botones personalizados */
+.btn-boton {
+  background-color: #0066cc;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-boton:hover {
+  background-color: #004d99;
+}
+
+
+
+.card img:not(.ico-imagen) {
+  height: 200px; 
+  object-fit: cover;
+}
+
+/* Contenedor del ícono y dimensiones definitivas */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.ico-imagen {
+  width: 30px !important;
+  height: 30px !important;
+  object-fit: contain;
 }

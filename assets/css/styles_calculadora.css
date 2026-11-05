@@ -1,72 +1,89 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 2;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
 
-    body {
-      background-color: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+.navbar {
+  background: #0d6efd;
+}
+    
+.navbar-brand, .nav-link {
+  color: #fff !important;
+  padding: 1px;
 
-    .calculadora {
-      width: 350px;
-      background-color: #fff;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      overflow: hidden;
-    }
+}
 
-    .pantalla {
-      background: #222;
-      color: #28a745;
-      text-align: right;
-      font-size: 1.5rem;
-      padding: 10px;
-      border: none;
-      width: 100%;
-      outline: none;
-    }
+/* Iconos de Logo (Valores respetados) */
+.log-icono, .ico-imagen {
+    object-fit: contain;
+}
+.log-icono { 
+  width: 30px; 
+  height: 30px; 
+}
 
-    .historial {
-      background: #333;
-      color: #aaa;
-      text-align: right;
-      padding: 5px 15px;
-      font-size: 0.9rem;
-      min-height: 25px;
-    }
+.ico-imagen { 
+  width: 50px; 
+  height: 50px; 
+  border-radius: 7px; 
+}
+    
 
-    .teclado {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-auto-rows: 60px;
-      gap: 8px; 
-      padding: 10px;
-    }
+.pantalla {
+  background: #222;
+  color: #28a745;
+  text-align: right;
+  font-size: 1.5rem;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  outline: none;
+}
 
-    .teclado button {
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-      transition: transform 0.1s ease, box-shadow 0.1s ease;
-    }
+.historial {
+  background: #333;
+  color: #aaa;
+  text-align: right;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  min-height: 25px;
+}
 
-    .teclado button:active {
-      transform: scale(0.95);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    }
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 60px;
+  gap: 8px; 
+  padding: 10px;
+  }
 
-    .btn-operador {
-      background-color:rgba(0,0,0,0.15);
-    }
+.teclado button {
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
 
-    .btn-funcion {
-      background-color: #e0e0e0;
-    }
+.teclado button:active {
+  transform: scale(0.95);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
 
-    .btn-igual {
-      background-color: #28a745;
-      color: white;
-      grid-row: span 2;
+.btn-operador {
+  background-color:rgba(0,0,0,0.15);
+}
 
-    }
+.btn-funcion {
+  background-color: #e0e0e0;
+}
+
+.btn-igual {
+  background-color: #28a745;
+  color: white;
+  grid-row: span 2;
+}
+
