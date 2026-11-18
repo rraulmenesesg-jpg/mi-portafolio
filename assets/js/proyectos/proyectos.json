@@ -1,0 +1,187 @@
+[
+  {
+    "id": "dart-flutter",
+    "titulo": "Página Informativa: El Mundo de Flutter",
+    "descripcion": "Desarrollo de un sitio web estático para introducir el lenguaje Dart y el ecosistema Flutter, enfocado en aplicaciones móviles. Demuestra dominio de tecnologías cross-platform. (Proyecto Colaborativo)",
+    "imagen": "assets/img/index/dart_flutter.png",
+    "alt": "Proyecto Dart/Flutter",
+    "badge": {
+      "texto": "Dart | Flutter | Web",
+      "clase": "bg-primary"
+    },
+    "demo": {
+      "url": "https://lenguage-dart.netlify.app",
+      "texto": "Ver Demo",
+      "disponible": true
+    },
+    "repo": {
+      "url": "https://github.com/rraulmenesesg-jpg/dart-fluter",
+      "texto": "Código",
+      "disponible": true
+    },
+    "tipo": "proyecto"
+  },
+  {
+    "id": "calculadora-basica",
+    "titulo": "Calculadora Interactiva (Versión Beta)",
+    "descripcion": "Implementación de una calculadora básica utilizando JavaScript puro. Este proyecto demuestra habilidades en lógica de programación y manipulación del DOM. (En constante mejora y optimización).",
+    "imagen": "assets/img/index/calculadorabeta.png",
+    "alt": "Calculadora JavaScript",
+    "badge": {
+      "texto": "JavaScript | Frontend",
+      "clase": "bg-warning text-dark"
+    },
+    "demo": {
+      "url": "hatml/calculadora-basica-beta.html",
+      "texto": "Ver Demo",
+      "disponible": true
+    },
+    "repo": {
+      "url": "https://github.com/rraulmenesesg-jpg/calculadora-basica-js",
+      "texto": "Código",
+      "disponible": true
+    },
+    "tipo": "proyecto"
+  },
+  {
+    "id": "plantilla-salon-belleza",
+    "titulo": "Diseño y Maquetación con Bootstrap 5",
+    "descripcion": "Maquetación de una plantilla responsive utilizando el framework Bootstrap. Enfocado en buenas prácticas de diseño mobile-first y componentes reutilizables.",
+    "imagen": "assets/img/index/plantilla.png",
+    "alt": "Plantilla Web Bootstrap",
+    "badge": {
+      "texto": "HTML | CSS | Bootstrap",
+      "clase": "bg-info"
+    },
+    "demo": {
+      "url": "hatml/palantilla.html",
+      "texto": "Ver Demo",
+      "disponible": true
+    },
+    "repo": {
+      "url": "https://github.com/rraulmenesesg-jpg/plantilla",
+      "texto": "Código",
+      "disponible": true
+    },
+    "tipo": "proyecto"
+  },
+  {
+    "id": "gestionador-tareas",
+    "titulo": "Gestionador de tareas (Versión Beta)",
+    "descripcion": "Implementación de un login para una pantalla de usuario utilizando JavaScript y base de datos. Este proyecto demuestra habilidades en lógica de programación y manipulación del DOM.",
+    "imagen": "assets/img/index/login.png",
+    "alt": "login JavaScript",
+    "badge": {
+      "texto": "JavaScript | Frontend | Database",
+      "clase": "bg-warning text-dark"
+    },
+    "demo": {
+      "url": "https://visionary-centaur-b3fd37.netlify.app/login.html",
+      "texto": "Ver Demo",
+      "disponible": true
+    },
+    "repo": {
+      "url": "https://github.com/rraulmenesesg-jpg",
+      "texto": "Código",
+      "disponible": true
+    },
+    "tipo": "proyecto"
+  },
+  {
+    "id": "academia-baile",
+    "titulo": "Academia de Baile",
+    "descripcion": "Un sitio web publicitario con gestión de personal, contacto directo con redes sociales, conectado con base de datos con un login, también la gestión de una agenda personalizada por el rol del personal (en desarrollo).",
+    "imagen": "assets/img/index/funny_dance.png",
+    "alt": "Academia de Baile",
+    "badge": {
+      "texto": "HTML | CSS | Bootstrap | JS",
+      "clase": "bg-info"
+    },
+    "demo": {
+      "url": "https://acdem-de-baile.netlify.app/",
+      "texto": "Ver Demo",
+      "disponible": true
+    },
+    "repo": {
+      "url": "https://github.com/rraulmenesesg-jpg/",
+      "texto": "Código",
+      "disponible": true
+    },
+    "tipo": "proyecto"
+  },
+  {
+    "id": "casa-del-movimiento",
+    "titulo": "La Casa del Movimiento",
+    "descripcion": "Proyecto de una casa de cultura para la gestión y visualización.",
+    "imagen": "assets/img/index/la casadel movimiento.jpg",
+    "alt": "La Casa del Movimiento",
+    "badge": {
+      "texto": "HTML | CSS | JS | Database",
+      "clase": "bg-info"
+    },
+    "demo": {
+      "url": "https://la-casa-del-movimiento.netlify.app",
+      "texto": "Ver Demo",
+      "disponible": true
+    },
+    "repo": {
+      "url": "https://github.com/rraulmenesesg-jpg/",
+      "texto": "Código no disponible",
+      "disponible": false
+    },
+    "tipo": "proyecto"
+  },
+  {
+    "id": "menu-qr-tacos",
+    "titulo": "Tacos \"Los Pepes\"",
+    "descripcion": "Proyecto para una taquería con opción de menú digital y contacto directo para WhatsApp y transferencias.",
+    "imagen": "assets/img/index/QR-tacos.png",
+    "alt": "Tacos Los Pepes QR",
+    "badge": {
+      "texto": "HTML | CSS | QR",
+      "clase": "bg-info"
+    },
+    "demo": {
+      "url": "https://los-pepes-tacos.netlify.app/",
+      "texto": "Ver Demo",
+      "disponible": true
+    },
+    "repo": {
+      "url": "https://github.com/rraulmenesesg-jpg/",
+      "texto": "Código",
+      "disponible": true
+    },
+    "tipo": "proyecto"
+  },
+  {
+    "id": "mas-proyectos",
+    "titulo": "Más Proyectos HTML",
+    "descripcion": "Explora más trabajos y prácticas desarrolladas.",
+    "imagen": "assets/img/index/mas_proyectos.jpg",
+    "alt": "Más Proyectos",
+    "badge": {
+      "texto": "HTML | CSS | Bootstrap | JS",
+      "clase": "bg-info"
+    },
+    "demo": {
+      "url": "Proyectos/masproyectos.html",
+      "texto": "Ver proyectos",
+      "disponible": true
+    },
+    "repo": {
+      "url": "https://github.com/rraulmenesesg-jpg/",
+      "texto": "Código",
+      "disponible": true
+    },
+    "tipo": "proyecto"
+  },
+  {
+    "id": "stack-en-desarrollo",
+    "titulo": "Más Proyectos en Desarrollo...",
+    "cta": {
+      "url": "#contacto",
+      "texto": "Pregúntame sobre mi Stack actual"
+    },
+    "tipo": "placeholder"
+  }
+]
