@@ -1,137 +1,72 @@
 /**
- * Renderizado dinámico y depuración de proyectos desde proyectos.json
- * Complejidad: O(n) tiempo / O(n) espacio sobre la lista de proyectos.
+ * Renderiza proyectos sin reemplazar el contenedor estructural de la sección.
  */
-const PROYECTOS_JSON_URL = 'assets/js/proyectos/proyectos.json';
-const CONTENEDOR_SELECTOR = '#proyectos';
+const JSON_URL = new URL('./proyectos.json', import.meta.url);
+const GRID_SELECTOR = '#proyectos .projects-grid';
 
-// Depuración estructurada de esquema y detección de rutas/typos heredados
-function depurarProyectos(proyectos) {
-    if (!Array.isArray(proyectos)) {
-        console.error('[ProyectosDebug] El JSON raíz debe ser un arreglo.');
-        return [];
-    }
+const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char => ({
+  '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+}[char]));
 
-    const idsVistos = new Set();
-
-    return proyectos.filter((item, index) => {
-        if (!item || typeof item !== 'object') {
-            console.warn(`[ProyectosDebug] Índice ${index} inválido.`);
-            return false;
-        }
-
-        if (!item.id || idsVistos.has(item.id)) {
-            console.warn(`[ProyectosDebug] ID duplicado o faltante en índice ${index}:`, item.id);
-        } else {
-            idsVistos.add(item.id);
-        }
-
-        if (item.tipo === 'placeholder') return true;
-
-        // Validación de campos obligatorios
-        const requeridos = ['titulo', 'descripcion', 'imagen', 'badge', 'demo', 'repo'];
-        const faltantes = requeridos.filter((campo) => !item[campo]);
-        if (faltantes.length > 0) {
-            console.error(`[ProyectosDebug] Proyecto "${item.id}" incompleto. Faltan: ${faltantes.join(', ')}`);
-            return false;
-        }
-
-        // Advertencias de rutas locales con typos o espacios detectados en el HTML original
-        if (item.demo.url.startsWith('hatml/')) {
-            console.warn(`[ProyectosDebug] Posible typo en ruta local (${item.id}): "${item.demo.url}" (¿quisiste decir "html/"?)`);
-        }
-        if (/\s/.test(item.imagen)) {
-            console.warn(`[ProyectosDebug] Ruta de imagen con espacios (${item.id}): "${item.imagen}"`);
-        }
-
-        return true;
-    });
+function safeURL(value, protocols = ['http:', 'https:']) {
+  if (typeof value !== 'string' || !value.trim()) return null;
+  try {
+    const parsed = new URL(value, window.location.href);
+    return protocols.includes(parsed.protocol) || value.startsWith('#') ? value : null;
+  } catch { return null; }
 }
 
-// Sanitización básica contra inyección HTML al interpolar strings
-function escaparHTML(str = '') {
-    return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
+function validateProjects(items) {
+  if (!Array.isArray(items)) throw new TypeError('El JSON de proyectos debe ser un arreglo.');
+  const ids = new Set();
+  return items.filter((item, index) => {
+    if (!item || typeof item !== 'object' || typeof item.id !== 'string' || !item.id || ids.has(item.id)) {
+      console.warn(`[ProyectosDebug] Elemento inválido o ID duplicado en índice ${index}.`);
+      return false;
+    }
+    ids.add(item.id);
+    if (item.tipo === 'placeholder') return typeof item.titulo === 'string';
+    const valid = ['titulo','descripcion','imagen'].every(key => typeof item[key] === 'string') &&
+      item.badge && typeof item.badge.texto === 'string' && typeof item.badge.clase === 'string' &&
+      item.demo && typeof item.demo.url === 'string' && item.repo && typeof item.repo.texto === 'string' &&
+      safeURL(item.demo.url) && safeURL(item.imagen) &&
+      (item.repo.disponible === false || safeURL(item.repo.url));
+    if (!valid) console.warn(`[ProyectosDebug] Proyecto descartado por esquema o URL inválida: ${item.id}`);
+    return Boolean(valid);
+  });
 }
 
-function crearTarjetaProyecto(proyecto) {
-    if (proyecto.tipo === 'placeholder') {
-        return `
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-lg border-dashed border-2 text-center p-4 bg-light bg-opacity-75 modern-card">
-                    <div class="card-body d-flex flex-column justify-content-center">
-                        <i class="bi bi-hourglass-split fs-1 text-muted mb-3"></i>
-                        <h5 class="card-title fw-bold">${escaparHTML(proyecto.titulo)}</h5>
-                        <a href="${escaparHTML(proyecto.cta?.url || '#contacto')}" class="btn btn-outline-dark mt-3">
-                            ${escaparHTML(proyecto.cta?.texto || 'Contáctame')}
-                        </a>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-
-    const repoAtributos = proyecto.repo.disponible === false
-        ? 'class="btn btn-secondary btn-sm disabled" aria-disabled="true" tabindex="-1"'
-        : `href="${escaparHTML(proyecto.repo.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-sm"`;
-
-    return `
-        <div class="col-md-6 col-lg-4" data-project-id="${escaparHTML(proyecto.id)}">
-            <div class="card h-100 shadow-lg border-0 overflow-hidden modern-card">
-                <img src="${escaparHTML(proyecto.imagen)}" class="card-img-top" alt="${escaparHTML(proyecto.alt || proyecto.titulo)}"
-                     onerror="console.error('[ProyectosDebug] Falló carga de imagen:', this.src)">
-                <div class="card-body d-flex flex-column">
-                    <span class="badge ${escaparHTML(proyecto.badge.clase)} mb-2 align-self-start">
-                        ${escaparHTML(proyecto.badge.texto)}
-                    </span>
-                    <h5 class="fw-bold mb-2">${escaparHTML(proyecto.titulo)}</h5>
-                    <p class="card-text text-muted small flex-grow-1">
-                        ${escaparHTML(proyecto.descripcion)}
-                    </p>
-                    <div class="d-flex justify-content-between mt-3">
-                        <a href="${escaparHTML(proyecto.demo.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                            <i class="bi bi-play-circle-fill"></i> ${escaparHTML(proyecto.demo.texto)}
-                        </a>
-                        <a ${repoAtributos}>
-                            <i class="bi bi-github"></i> ${escaparHTML(proyecto.repo.texto)}
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
+function renderProject(item) {
+  if (item.tipo === 'placeholder') {
+    const href = safeURL(item.cta?.url || '#contacto') || '#contacto';
+    return `<div class="col-md-6 col-lg-4"><article class="card h-100 shadow-lg text-center p-4 bg-light modern-card">
+      <div class="card-body d-flex flex-column justify-content-center"><i class="bi bi-hourglass-split fs-1 text-muted mb-3" aria-hidden="true"></i>
+      <h3 class="h5 card-title fw-bold">${escapeHTML(item.titulo)}</h3>
+      <a href="${escapeHTML(href)}" class="btn btn-outline-dark mt-3">${escapeHTML(item.cta?.texto || 'Contáctame')}</a></div></article></div>`;
+  }
+  const repo = item.repo.disponible === false
+    ? `<span class="btn btn-secondary btn-sm disabled" aria-disabled="true">${escapeHTML(item.repo.texto)}</span>`
+    : `<a href="${escapeHTML(item.repo.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-sm"><i class="bi bi-github" aria-hidden="true"></i> ${escapeHTML(item.repo.texto)}</a>`;
+  return `<div class="col-md-6 col-lg-4" data-project-id="${escapeHTML(item.id)}"><article class="card h-100 shadow-lg border-0 overflow-hidden modern-card">
+    <img src="${escapeHTML(item.imagen)}" class="card-img-top" alt="${escapeHTML(item.alt || item.titulo)}" loading="lazy" decoding="async">
+    <div class="card-body d-flex flex-column"><span class="badge ${escapeHTML(item.badge.clase)} mb-2 align-self-start">${escapeHTML(item.badge.texto)}</span>
+    <h3 class="h5 fw-bold mb-2">${escapeHTML(item.titulo)}</h3><p class="card-text text-muted small flex-grow-1">${escapeHTML(item.descripcion)}</p>
+    <div class="d-flex flex-wrap justify-content-between gap-2 mt-3"><a href="${escapeHTML(item.demo.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="bi bi-play-circle-fill" aria-hidden="true"></i> ${escapeHTML(item.demo.texto || 'Ver demo')}</a>${repo}</div></div></article></div>`;
 }
 
-async function inicializarProyectos() {
-    const contenedor = document.querySelector(CONTENEDOR_SELECTOR);
-    if (!contenedor) {
-        console.error(`[ProyectosDebug] No se encontró el contenedor "${CONTENEDOR_SELECTOR}" en el DOM.`);
-        return;
-    }
-
-    try {
-        const respuesta = await fetch(PROYECTOS_JSON_URL);
-        if (!respuesta.ok) {
-            throw new Error(`HTTP ${respuesta.status} al cargar ${PROYECTOS_JSON_URL}`);
-        }
-
-        const datos = await respuesta.json();
-        const proyectosValidos = depurarProyectos(datos);
-
-        console.info(`[ProyectosDebug] ${proyectosValidos.length}/${datos.length} elementos renderizados correctamente.`);
-        contenedor.innerHTML = proyectosValidos.map(crearTarjetaProyecto).join('');
-    } catch (error) {
-        console.error('[ProyectosDebug] Error crítico:', error);
-        contenedor.innerHTML = `
-            <div class="col-12 text-center text-danger">
-                No se pudieron cargar los proyectos. Revisa la consola para detalles de depuración.
-            </div>
-        `;
-    }
+async function initProjects() {
+  const grid = document.querySelector(GRID_SELECTOR);
+  if (!grid) return console.error(`[ProyectosDebug] No existe ${GRID_SELECTOR}`);
+  try {
+    const response = await fetch(JSON_URL);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const raw = await response.json();
+    const valid = validateProjects(raw);
+    grid.innerHTML = valid.map(renderProject).join('');
+    console.info(`[ProyectosDebug] ${valid.length}/${raw.length} elementos renderizados.`);
+  } catch (error) {
+    console.error('[ProyectosDebug] No se pudieron cargar los proyectos:', error);
+    grid.innerHTML = '<div class="col-12"><p class="alert alert-warning mb-0">No se pudieron cargar los proyectos.</p></div>';
+  }
 }
-
-document.addEventListener('DOMContentLoaded', inicializarProyectos);
+initProjects();
