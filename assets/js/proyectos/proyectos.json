@@ -10,7 +10,7 @@
       "clase": "bg-primary"
     },
     "demo": {
-      "url": "https://lenguage-dart.netlify.app",
+      "url": "https://dart-fluter-invo.raulmenesesdev.com",
       "texto": "Ver Demo",
       "disponible": true
     },
@@ -21,6 +21,7 @@
     },
     "tipo": "proyecto"
   },
+  
   {
     "id": "calculadora-basica",
     "titulo": "Calculadora Interactiva (Versión Beta)",
@@ -76,7 +77,7 @@
       "clase": "bg-warning text-dark"
     },
     "demo": {
-      "url": "https://visionary-centaur-b3fd37.netlify.app/login.html",
+      "url": "https://taskmanagerbeta.raulmenesesdev.com",
       "texto": "Ver Demo",
       "disponible": true
     },
@@ -98,7 +99,7 @@
       "clase": "bg-info"
     },
     "demo": {
-      "url": "https://acdem-de-baile.netlify.app/",
+      "url": "https://academia-de-baile.raulmenesesdev.com",
       "texto": "Ver Demo",
       "disponible": true
     },
