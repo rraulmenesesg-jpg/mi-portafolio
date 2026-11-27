@@ -25,7 +25,6 @@
 
     <meta name="google-site-verification" content="GZmnA_vxeemY4lPRbiKm8JkIS5f-Ang4y1GRYe61aUc" />
 </head>
-z
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
@@ -66,7 +65,7 @@ z
     <section id="proyectos" class="py-5 bg-light">
         <div class="container py-4">
             <h2 class="text-center fw-bold mb-5 display-5">Proyectos Destacados</h2>
-            <div class="row g-4 justify-content-center"></div>
+            <div class="row g-4 justify-content-center projects-grid" aria-live="polite"></div>
         </div>
     </section>
 
@@ -76,13 +75,14 @@ z
     <section id="habilidades" class="py-5 bg-white">
         <div class="container py-4">
             <h2 class="text-center fw-bold mb-5 display-5">Habilidades Técnicas</h2>
-            <div class="row g-4"></div>
+            <div class="row g-4 skills-grid" aria-live="polite"></div>
         </div>
     </section>
 
 
     <!-- Razones para sitio web -->
-    <section id="trabajo" class="bg-light">
+    <section id="trabajo" class="py-5 bg-light">
+        <div class="container py-4 website-content">
         <h2 class="text-center fw-bold mb-5 display-5">Sitio Web</h2>
         <div class="row justify-content-center">
             <div class="col-md-8 text-justify">
@@ -126,6 +126,7 @@ z
                 </a>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- Contacto -->
@@ -135,7 +136,7 @@ z
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <div class="card p-4 shadow-sm border-0">
-                        <div class="card-body"></div>
+                        <div class="card-body contact-content" aria-live="polite"></div>
                     </div> 
                 </div> 
             </div> 
@@ -147,9 +148,9 @@ z
     </footer>
 
     <script type="module" src="assets/js/contacto/debug-contacto.js"></script>
+    <script type="module" src="assets/js/porque-web/debug-porque-web.js"></script>
     <script type="module" src="assets/js/proyectos/proyectos-destacados.js"></script>
-    <script type="module" src="assets/js/habilidades/degug-habilidades.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
-</script>
+    <script type="module" src="assets/js/habilidades/debug-habilidades.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
     </html>
