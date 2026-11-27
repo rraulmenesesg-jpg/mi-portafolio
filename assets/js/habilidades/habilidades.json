@@ -1,0 +1,5 @@
+[
+ {"id":"frontend-ui-ux","titulo":"Frontend & UI/UX","icono":"bi-laptop","colorClase":"text-primary","tecnologias":["HTML","CSS","JavaScript","Dart/Flutter","Bootstrap","React","Tailwind CSS"]},
+ {"id":"backend-database","titulo":"Backend & Base de Datos","icono":"bi-server","colorClase":"text-success","tecnologias":["PHP","Python","Django","Bases de Datos SQL (Postgresql, Supabase)","APIs REST"]},
+ {"id":"herramientas-devops","titulo":"Herramientas & DevOps","icono":"bi-tools","colorClase":"text-dark","tecnologias":["Git","GitHub","Netlify","Vercel","Docker (Básico)","Metodologías Ágiles (Scrum/Kanban)"]}
+]

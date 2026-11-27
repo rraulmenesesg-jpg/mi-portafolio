@@ -1,0 +1,104 @@
+{
+  "encabezado": {
+    "badge": "¿Por qué necesitas una página web?",
+    "titulo": "Tu negocio merece estar",
+    "tituloResaltado": "en internet 24/7"
+  },
+  "razones": {
+    "titulo": "Razones principales",
+    "icono": "bi-lightbulb-fill",
+    "items": [
+      {
+        "id": "google",
+        "imagen": "assets/img/index/google.png",
+        "alt": "Google",
+        "titulo": "Te encuentran en Google",
+        "descripcion": "Cuando tus clientes buscan “dentista cerca”, “tortas en Roma” o “clases de inglés CDMX”, <strong>tu web aparece</strong>. Sin ella, prácticamente no existes."
+      },
+      {
+        "id": "24-7",
+        "imagen": "assets/img/index/247v2.png",
+        "alt": "Trabaja 24 horas",
+        "titulo": "Trabaja 24 horas",
+        "descripcion": "Tu página está abierta aunque tú estés durmiendo, en vacaciones o atendiendo clientes."
+      },
+      {
+        "id": "confianza",
+        "imagen": "assets/img/index/verificado.png",
+        "alt": "Genera confianza",
+        "titulo": "Genera confianza",
+        "descripcion": "Un negocio con página web profesional se ve mucho más serio y confiable."
+      }
+    ]
+  },
+  "beneficios": {
+    "titulo": "Beneficios reales",
+    "icono": "bi-gem",
+    "items": [
+      {
+        "id": "clientes",
+        "icono": "bi-people-fill",
+        "titulo": "Más clientes",
+        "descripcion": "Sin gastar tanto en publicidad.",
+        "delay": "100"
+      },
+      {
+        "id": "tiempo",
+        "icono": "bi-clock",
+        "titulo": "Ahorras tiempo",
+        "descripcion": "Los clientes ven todo sin llamarte.",
+        "delay": "200"
+      },
+      {
+        "id": "inversion",
+        "icono": "bi-currency-exchange",
+        "titulo": "Es una inversión",
+        "descripcion": "Te genera clientes durante años.",
+        "delay": "300"
+      },
+      {
+        "id": "alcance",
+        "icono": "bi-geo-alt",
+        "titulo": "Llegas más lejos",
+        "descripcion": "Toda CDMX y otros estados.",
+        "delay": "400"
+      }
+    ]
+  },
+  "objetivos": {
+    "titulo": "Objetivos que cumple tu web",
+    "icono": "bi-target",
+    "items": [
+      {
+        "numero": "01",
+        "titulo": "Visibilidad",
+        "descripcion": "Que te encuentren fácilmente",
+        "delay": "100"
+      },
+      {
+        "numero": "02",
+        "titulo": "Credibilidad",
+        "descripcion": "Que te vean profesional",
+        "delay": "200"
+      },
+      {
+        "numero": "03",
+        "titulo": "Información",
+        "descripcion": "Precios, servicios y contacto",
+        "delay": "300"
+      },
+      {
+        "numero": "04",
+        "titulo": "Ventas",
+        "descripcion": "Convertir visitas en clientes",
+        "delay": "400"
+      }
+    ]
+  },
+  "cta": {
+    "texto": "Quiero mi página web",
+    "url": "https://wa.me/5215525148761",
+    "icono": "bi-whatsapp",
+    "subtexto": "Diseño moderno • Rápida • Fácil de usar • 100% adaptada a tu negocio"
+  }
+}

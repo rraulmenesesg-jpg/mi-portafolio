@@ -1,0 +1,39 @@
+{
+  "contacto": [
+    {
+      "id": "correo",
+      "tipo": "correo",
+      "titulo": "Correo Electrónico",
+      "valor": "r.raulmenesesg@gmail.com",
+      "enlace": "https://mail.google.com/mail/?view=cm&fs=1&to=r.raulmenesesg@gmail.com",
+      "btnTexto": "📧 Enviar correo",
+      "btnClase": "btn btn-outline-primary btn-sm"
+    },
+    {
+      "id": "whatsapp",
+      "tipo": "whatsapp",
+      "titulo": "Contacto Directo (WhatsApp)",
+      "valor": "+52 1 55 2514 8761",
+      "enlace": "https://wa.me/5215525148761",
+      "btnTexto": "Enviar mensaje",
+      "btnClase": "btn btn-success d-inline-flex align-items-center gap-2 shadow",
+      "iconoSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-whatsapp\" viewBox=\"0 0 16 16\"><path d=\"M13.601 2.326A7.854 7.854 0 0 0 8.002.03C3.587.03.003 3.611.003 8.027a7.937 7.937 0 0 0 1.125 4.064L.026 16l3.994-1.07a7.973 7.973 0 0 0 3.982 1.025h.004c4.415 0 8.001-3.582 8.001-7.997a7.96 7.96 0 0 0-2.406-5.632zM8.001 14.518a6.46 6.46 0 0 1-3.292-.895l-.236-.14-2.37.635.633-2.31-.153-.237a6.456 6.456 0 0 1-.996-3.44c0-3.57 2.906-6.476 6.478-6.476a6.43 6.43 0 0 1 4.584 1.892 6.433 6.433 0 0 1 1.894 4.582c0 3.57-2.906 6.477-6.478 6.477z\"/><path d=\"M11.385 9.423c-.19-.095-1.123-.555-1.296-.618-.173-.064-.3-.095-.426.096s-.49.618-.6.745c-.111.127-.222.143-.411.048-.19-.095-.8-.294-1.525-.94-.564-.503-.945-1.123-1.056-1.312-.11-.19-.012-.294.083-.389.086-.085.19-.222.285-.333.095-.111.127-.19.19-.317.063-.127.032-.238-.016-.333-.048-.096-.427-1.026-.585-1.404-.153-.369-.31-.318-.426-.324h-.364a.7.7 0 0 0-.505.238c-.173.19-.662.646-.662 1.575 0 .929.678 1.826.773 1.953.095.127 1.334 2.032 3.23 2.85.451.195.8.31 1.074.397.451.143.862.123 1.187.075.362-.054 1.123-.458 1.282-.9.158-.443.158-.823.111-.9-.048-.079-.174-.126-.364-.222z\"/></svg>"
+    }
+  ],
+  "redes": [
+    {
+      "id": "linkedin",
+      "nombre": "LinkedIn",
+      "url": "https://www.linkedin.com/in/raul-meneses-2006-mx",
+      "icono": "bi-linkedin",
+      "clase": "btn btn-primary btn-lg mx-2"
+    },
+    {
+      "id": "github",
+      "nombre": "GitHub",
+      "url": "https://github.com/rraulmenesesg-jpg",
+      "icono": "bi-github",
+      "clase": "btn btn-dark btn-lg mx-2"
+    }
+  ]
+}
