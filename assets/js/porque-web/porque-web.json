@@ -10,21 +10,21 @@
     "items": [
       {
         "id": "google",
-        "imagen": "../assets/img/index/google.png",
+        "imagen": "assets/img/index/google.png",
         "alt": "Google",
         "titulo": "Te encuentran en Google",
         "descripcion": "Cuando tus clientes buscan “dentista cerca”, “tortas en Roma” o “clases de inglés CDMX”, <strong>tu web aparece</strong>. Sin ella, prácticamente no existes."
       },
       {
         "id": "24-7",
-        "imagen": "../assets/img/index/247v2.png",
+        "imagen": "assets/img/index/247v2.png",
         "alt": "Trabaja 24 horas",
         "titulo": "Trabaja 24 horas",
         "descripcion": "Tu página está abierta aunque tú estés durmiendo, en vacaciones o atendiendo clientes."
       },
       {
         "id": "confianza",
-        "imagen": "../assets/img/index/verificado.png",
+        "imagen": "assets/img/index/verificado.png",
         "alt": "Genera confianza",
         "titulo": "Genera confianza",
         "descripcion": "Un negocio con página web profesional se ve mucho más serio y confiable."
